@@ -1,13 +1,14 @@
-import React from 'react';
-import RecipeList from './components/RecipeList';
+import data from "./data.json";
+import friends from "./friends.json";
+import Statistics from "./Statistics";
+import FriendList from "./FriendList";
 
-function App() {
+export default function App() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', backgroundColor: '#fafafa' }}>
-      <h1>Список рецептів</h1>
-      <RecipeList />
+    <div>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      <FriendList friends={friends} />
     </div>
   );
 }
-
-export default App;
